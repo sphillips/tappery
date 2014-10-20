@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tappery | Edit Bar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="simplegrid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <link type="text/javascript" src="navicon.js">
+    </head>
+<body>
+	<div class="navigation-wrapper">
+	<!-- Start Navigation Grid -->
+    <div class="grid" id="nav-wrapper-grid">
+    	<!-- Start Columns -->
+    <div class="col-1-1">
+    	<!-- Start Navigation Wrapper -->
+    	<nav id="nav-wrapper">
+    		<div id="links">
+    			<a href="index.html" id="nav-logo"><img src="images/navLogo.png" /></a>
+    			<ul id="nav">
+    				<li><a href="bars.html">BARS</a></li>
+    				<li><a href="#">BLOG</a></li>
+    				<li><a href="about.html">ABOUT</a></li>
+    				<li><a href="#">REGISTER YOUR BAR</a></li>
+    			</ul>
+    		</div>
+    	</nav>
+    	<!-- End Navigation Wrapper -->
+	    </div>
+	    <!-- End Columns -->
+	</div>
+	<!-- End Navigation Grid -->
+	</div>
+
+
+     <div class="grid" id="form-progess-wrapper-grid">
+        <div class="col-1-1">
+            <div id="form-progress">
+            <ol class="progresstrack">
+                <li class="progresstrack-done">1. Register an Account</li>
+                <li class="progresstrack-done">2. Create Your Business Page</li>
+            </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid" id="form-wrapper-grid">
+        <div class="col-1-1" id="form-columns">
+            <form id="form-fields">
+                <h1>Create Your Page</h1>
+                <label>Logo</label><br />
+                <input type="button" value="logoUpload"><br />
+                Business Name: <input type="text" name="barname">
+                <br />
+                Description: <input type="text-area" name="bardescription">
+                <br />
+                Zip: <input type="text-area" name="zipcode">
+                Description: <input type="email" name="email">
+                <br />
+                <label>State:</label> 
+                <select>
+                    <option value="loyola">Maryland</option>
+                </select>
+                <br />
+                <label>Region</label> 
+                <select>
+                    <option value="loyola">Loyola</option>
+                </select>
+                <br />
+                Phone: <input type="email" name="email">
+                <br />
+                Facebook: <input type="email" name="email">
+                <br />
+                Twitter: <input type="email" name="email">
+                <br />
+                Monday Specials: <input type="email" name="email">
+                <br />
+                Tuesday Specials: <input type="email" name="email">
+                <br />
+                Wednesday Specials: <input type="email" name="email">
+                <br />
+                Thursday Specials: <input type="email" name="email">
+                <br />
+                Friday Specials: <input type="email" name="email">
+                <br />
+                Saturday Specials: <input type="email" name="email">
+                <br />
+                Sunday Specials: <input type="email" name="email">
+                <br />
+
+                <input type="submit" value="FINISH" id="createPageBtn">
+            </form>
+        </div>
+    </div>
+    
+     <div class="grid" id="footer-wrapper-grid">
+        <div class="col-1-1">
+            <div id="footer-content">
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Register Your Business</a></li>
+                    <li><p>Tappery LLC 2014</p></li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+
+        <script type="text/javascript">$("#nav").addClass("js").before('<div id="menu">&#9776;</div>');
+    $("#menu").click(function(){
+        $("#nav").slideToggle();
+    });
+    $(window).resize(function(){
+        if(window.innerWidth > 768) {
+            $("#nav").removeAttr("style");
+        }
+    });</script>
+</body>
