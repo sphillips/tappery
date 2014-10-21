@@ -1,0 +1,23 @@
+<div class="grid" id="footer-wrapper-grid">
+    <div class="col-1-1">
+        <div id="footer-content">
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Register Your Business</a></li>
+                <li><p>Tappery LLC 2014</p></li>
+            </ul>
+        </div>
+    </div>  
+</div>
+
+<script type="text/javascript">$("#nav").addClass("js").before('<div id="menu">&#9776;</div>');
+    $("#menu").click(function(){
+        $("#nav").slideToggle();
+    });
+    $(window).resize(function(){
+        if(window.innerWidth > 768) {
+            $("#nav").removeAttr("style");
+        }
+    });
+</script>
