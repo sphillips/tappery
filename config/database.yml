@@ -31,4 +31,4 @@ production:
   pool: 5
   username: postgres
   password: 4mFnZzGi
-	min_messages: WARNING
+  min_messages: WARNING
