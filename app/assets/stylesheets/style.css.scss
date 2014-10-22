@@ -125,7 +125,7 @@ html, body {
     /*---- index.html ----*/    
 
     .mission-statement-wrapper {
-    background-image: url('images/downtownblur.jpg')!important;  
+    background-image: asset-data-url('downtownblur.jpg')!important;  
 	}
 
 	#body-wrapper-grid {
@@ -318,7 +318,7 @@ html, body {
 #bar-information-detail p {
     font-size: 0.8em;
     padding: 0 10px 0 10px;
-    margin-bottom: 0;e
+    margin-bottom: 0;
 }
 
 #bar-social-media ul {
