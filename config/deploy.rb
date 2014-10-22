@@ -9,6 +9,7 @@ set :repo_url, 'git@github.com:sphillips/tappery.git'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/tappery'
+set :user, 'sean'
 
 # Default value for :scm is :git
 set :scm, :git
@@ -17,10 +18,10 @@ set :scm, :git
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
@@ -32,7 +33,7 @@ set :scm, :git
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 5
 
 namespace :deploy do
 

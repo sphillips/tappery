@@ -20,6 +20,15 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
+
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  database: tappery
+  pool: 5
+  username: postgres
+  password: 4mFnZzGi
+	min_messages: WARNING
