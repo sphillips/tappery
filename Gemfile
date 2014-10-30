@@ -6,7 +6,8 @@ gem 'rails', '4.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use PG in production
-gem 'pg', group: :production
+# gem 'pg', group: :production
+gem 'mysql2', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -15,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+# have to use this version of devise so rails 4 strong parameters will work
 gem 'devise', '3.0.0.rc'
 
 # Use jquery as the JavaScript library
