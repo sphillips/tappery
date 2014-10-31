@@ -70,6 +70,6 @@ class BarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bar_params
-      params[:bar]
+      params.require(:bar).permit(:name, :description, :zip, :phone, :facebook, :twitter, :mon_special, :tue_special, :wed_special, :thu_special, :fri_special)
     end
 end

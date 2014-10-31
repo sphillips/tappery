@@ -1,17 +1,65 @@
-<%= form_for(@bar) do |f| %>
-  <% if @bar.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+<div class="grid" id="form-wrapper-grid">
+  <div class="col-1-1" id="form-columns">
+    <%= form_for(@bar) do |f| %>
 
-      <ul>
-      <% @bar.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% if @bar.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+
+          <ul>
+          <% @bar.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <h1>Bar Info</h1>
+      <label>Logo</label><br />
+      <input type="button" value="logoUpload"><br />
+      Business Name: <%= f.text_field :name %>
+      <br />
+      Description: <%= f.text_field :description %>
+      <br />
+      Zip: <%= f.text_field :zip %>
+      <!-- Description: <input type="email" name="email"> -->
+      <br />
+      <label>State:</label> 
+      <select>
+          <option value="Maryland">Maryland</option>
+      </select>
+      <br />
+      <label>Region</label> 
+      <select>
+          <option value="Loyola">Loyola</option>
+      </select>
+      <br />
+      Phone: <%= f.text_field :phone %>
+      <br />
+      Facebook:  <%= f.text_field :facebook %>
+      <br />
+      Twitter:  <%= f.text_field :twitter %>
+      <br />
+      Monday Specials:  <%= f.text_field :mon_special %>
+      <br />
+      Tuesday Specials:  <%= f.text_field :tue_special %>
+      <br />
+      Wednesday Specials:  <%= f.text_field :wed_special %>
+      <br />
+      Thursday Specials:  <%= f.text_field :thu_special %>
+      <br />
+      Friday Specials:  <%= f.text_field :fri_special %>
+      <br />
+      Saturday Specials:  <%= f.text_field :sat_special %>
+      <br />
+      Sunday Specials:  <%= f.text_field :sun_special %>
+      <br />
+   
+
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
+    </div>
+</div>
