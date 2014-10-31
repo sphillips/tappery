@@ -27,9 +27,9 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: tappery
-  username: tappery
-  password: 4mFnZzGi
+  database: rails
+  username: rails
+  password: ExlJvZjc7Q
   host: 127.0.0.1
   port: 3306
   pool: 5
