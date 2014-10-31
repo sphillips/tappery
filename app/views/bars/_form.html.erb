@@ -17,12 +17,11 @@
       <h1>Bar Info</h1>
       <label>Logo</label><br />
       <input type="button" value="logoUpload"><br />
-      Business Name: <%= f.text_field :name %>
+      Business Name: <%= f.text_field :name, required: true %>
       <br />
       Description: <%= f.text_field :description %>
       <br />
       Zip: <%= f.text_field :zip %>
-      <!-- Description: <input type="email" name="email"> -->
       <br />
       <label>State:</label> 
       <select>
