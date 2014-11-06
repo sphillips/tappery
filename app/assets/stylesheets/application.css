@@ -418,7 +418,6 @@ html, body {
 }
 
 .about-us-info p {
-    background-color: #eee;
     padding: 10px;
 
 }
@@ -431,66 +430,44 @@ html, body {
 /*      BAR REGISTRATION FORMS      */
 
 
-#form-progress {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-ol.progresstrack {
-    width: 450px;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
-}
-
-ol.progresstrack li {
-    display: inline-block;
+#bar-registration-container h1{
     text-align: center;
-    line-height: 3em;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-
-
-ol.progresstrack li.progresstrack-done {
-    color: black;
-    border-bottom: 4px solid yellowgreen;
-}
-
-ol.progresstrack li.progresstrack-todo {
-    color: #C7C7C7;
-    border-bottom: 4px solid #C7C7C7;
 }
 
 #form-fields {
-    width: 480px;
-    margin: 0 auto;
-    background-color: #eee;
-}
-
-#form-fields h1 {
+    width: 340px;
     text-align: center;
-    color: #3d6c46;
-    padding: 10px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#form-fields label, input {
-    color: #3d6c46;
-    margin-top: 10px;
+
+#form-fields input[type=email] {
+    font-size: 27px;
+    margin-bottom: 20px;
 }
 
-#signUp {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0; 
-    vertical-align: bottom;
-    width: 480px;
-    padding: 15px;
-    background-color: #444;
+#form-fields input[type=password] {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.form-label span {
+    display: inline-block;
+    text-align: left;
+    color: #000;
+    width: 100%;
+    margin-left: 5px;
+}
+
+#submit {
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    background-color: #000;
     color: #fff;
-    text-decoration: none;
+    font-size: 15px;
     border: none;
 }
 
@@ -857,86 +834,47 @@ ol.progresstrack li.progresstrack-todo {
 /*---- register.html ----*/
 /*      BAR REGISTRATION FORMS      */
 
-#form-progress-columns {
-    padding: 0;
-}
 
-#form-progress {
-    margin: 0 auto;
-    overflow: hidden;
-
-}
-
-ol.progresstrack {
-    width: 320px;
-    margin: 0 auto;
-    padding: 5px;
-    list-style-type: none;
-}
-
-ol.progresstrack li {
-    display: inline-block;
+#bar-registration-container h1{
     text-align: center;
-    line-height: 3em;
-    font-size: 14.4px;
-
-}
-
-ol.progresstrack p {
-    font-size: 8px;
-
-}
-
-
-
-ol.progresstrack li.progresstrack-done {
-    color: black;
-    border-bottom: 4px solid yellowgreen;
-}
-
-ol.progresstrack li.progresstrack-todo {
-    color: #C7C7C7;
-    border-bottom: 4px solid #C7C7C7;
-}
-
-#registration-forms {
-    padding: 0;
 }
 
 #form-fields {
-    width: 320px;
-    margin: 0 auto;
-    padding: 0;
-    background-color: #eee;
-    overflow: hidden;
-}
-
-#form-fields h1 {
+    width: 340px;
     text-align: center;
-    color: #3d6c46;
-    padding: 10px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#form-fields label, input {
-    color: #3d6c46;
-    margin-top: 10px;
-    margin-left: 20px;
+
+#form-fields input[type=email] {
+    font-size: 27px;
+    margin-bottom: 20px;
 }
 
-#signUp {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0; 
-    vertical-align: bottom;
-    width: 320px;
-    padding: 15px;
-    background-color: #444;
+#form-fields input[type=password] {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.form-label span {
+    display: inline-block;
+    text-align: left;
+    color: #000;
+    width: 100%;
+    margin-left: 5px;
+}
+
+#submit {
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    background-color: #000;
     color: #fff;
-    text-decoration: none;
+    font-size: 15px;
     border: none;
 }
-
-
 
 /*==============================================*/
 
