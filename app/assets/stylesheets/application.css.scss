@@ -581,8 +581,8 @@ a:hover {
 
 /*---- index.html ----*/
 
-        .mission-statement-wrapper {
-    background-image: url('images/downtownblur.jpg')!important;  
+    .mission-statement-wrapper {
+        background-image: asset-data-url('downtownblur.jpg')!important;  
     }
 
     #mission-statement p {
