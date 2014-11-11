@@ -15,6 +15,7 @@
       <% end %>
 
       <h1>Bar Info</h1>
+      <div id="form-fields">
       <label>Logo</label><br />
       <input type="button" value="logoUpload"><br />
       Business Name: <%= f.text_field :name, required: true %>
@@ -30,7 +31,12 @@
       <br />
       <label>Region</label> 
       <select>
-          <option value="Loyola">Loyola</option>
+            <option>All</option>
+            <option>Downtown</option>
+            <option>Federal Hill</option>
+            <option>Fells Point</option>
+            <option>Johns Hopkins</option>
+            <option>Loyola</option>
       </select>
       <br />
       Phone: <%= f.text_field :phone %>
@@ -59,6 +65,6 @@
           <%= f.submit %>
         </div>
       <% end %>
-
+    </div>
     </div>
 </div>
