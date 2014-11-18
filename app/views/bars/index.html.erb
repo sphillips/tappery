@@ -1,9 +1,12 @@
 <%= provide(:title, "Bars") %>
-<div class="grid">
-    <div class="col-1-1" id="bars-label">
-        <h1>Bars</h1>
-        <h2>Filter by area:
-        <select>
+
+`<div class="container" id="bars-header">
+    <h1>Bars</h1>
+    <div class="form-horizontal" role="form">
+      <div class="form-group">
+        <label class="col-sm-2 control-label" id="filter-by-area">Filter by area:</label>
+      <div class="col-sm-3">
+        <select class="form-control">
             <option>All</option>
             <option>Downtown</option>
             <option>Federal Hill</option>
@@ -11,25 +14,24 @@
             <option>Johns Hopkins</option>
             <option>Loyola</option>
         </select>
-        </h2>
+       </div>
+      </div>
     </div>
-</div>
+  </div>
   
   <% @bars.each do |bar| %>
-    <div class="grid bars-grid">
-      <div class="col-3-12">
-              <div id="bar-thumbnail">
-                  <img src="images/zen.png">
-                  <h3><span>LOYOLA</span></h3>
-              </div>
-          </div>
-          <div class="col-9-12">
-             <div id="bar-detail">
-                  <h3><%= bar.name %></h3>
-                  <p><%= bar.address_1 %></p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ullamcorper velit. Curabitur commodo pretium dui, et accumsan felis egestas at. Donec feugiat orci justo, quis eleifend sem ornare ac. Aenean volutpat at tellus eget viverra. Sed rutrum ut elit sed consequat. Sed consectetur tincidunt quam, vel vestibulum neque tempus et. Nam aliquet, felis a vulputate pharetra, enim sem suscipit nibh, vitae euismod urna est non sem. Integer in venenatis ante. </p>
-              </div>
-          </div>
+  <div class="container" id="bars-content-container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="http://placehold.it/263x200" class="img-responsive" alt="bar-profile-placeholder">
+      </div>
+      <div class="col-md-9" id="bars-bar-content">
+        <h2><a href="<%= bar.name %>"><%= bar.name %></a></h2>
+        <p><%= bar.address_1 %></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra vehicula tempus. Morbi a massa sed urna finibus venenatis id id arcu. Mauris eu luctus dui. Sed aliquam eget mauris sed ullamcorper. Integer mattis volutpat mauris a facilisis. Nunc non orci dolor. Vestibulum ultricies ac augue sed tristique. Nulla et leo sit amet odio porttitor consectetur eget vel sapien. Morbi pharetra vehicula auctor. Vivamus sapien orci, vehicula at tempus ac, viverra sed tellus</p>
+      </div>
     </div>
+  </div>
+   
   <% end %>  
 <!-- </div> -->

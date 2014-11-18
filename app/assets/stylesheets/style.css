@@ -1,0 +1,159 @@
+/** GENERAL **/
+h1,h2,h3,a,p,label {
+    font-family: 'HouschkaAlt-Light', Fallback, sans-serif;
+}
+
+
+
+/** NAVIGATION **/
+
+
+#navigation-style {
+	background-color: #fff;
+}
+
+a#focus {
+	background-color:#3d6c46;
+}
+
+a.navbar-brand {
+	padding: 5px 15px 0 15px;
+	color: #3d6c46;
+}
+
+
+
+#nav-logo-img {
+	width: 150px;
+	height: 40px;
+}
+
+
+/** FOOTER **/
+
+.footer {
+	text-align: center;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer li {
+	display: inline;
+	padding: 10px;
+}
+
+/** INDEX.html **/
+
+
+#featured-information {
+	background-image: url('downtownblur.jpg')!important; 
+	padding-bottom: 0; 
+}
+
+#featured-information h1 {
+	color: #fff;
+}
+
+#featured-information h2 {
+	color: #fff;
+}
+
+#featured-information h3 {
+	color: #fff;
+}
+
+#index-iphone-mockup  {
+	margin-top: 30px;
+}
+
+#additional-information h4 {
+	text-align: center;
+}
+
+#additional-information img {
+	margin: 0 auto;
+}
+
+/** BARS.html **/
+
+#bars-header {
+	margin-top: 50px;
+}
+
+#filter-by-area {
+	text-align: center;
+	font-size: 20px;
+	line-height: 15px;
+}
+
+#bars-content-container {
+	margin-top: 20px;
+}
+
+#bars-bar-content {
+	background-color: #F7F7F7;
+}
+
+
+/** BARS-DETAIL.html **/
+
+
+#bars-detail-header {
+	margin-top: 80px;
+}
+
+#bars-detail-header h1 {
+	margin-top: 0px;
+	font-size: 32px;
+}
+
+#bars-detail-header h2 {
+	font-size: 22px;
+}
+
+#bars-detail-header ul {
+	list-style: none;
+}
+
+#bars-detail-header li {
+	padding: 10px;
+	display: inline;
+}
+
+#bars-detail-social-media {
+	width: 12px;
+	height: 12px;
+}
+#bars-detail-social-media img {
+	padding-left: 10px;
+}
+
+#bars-daily-specials {
+	margin-bottom: 20px;
+}
+
+#bars-day-of-week {
+	padding: 5px;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+}
+
+#bars-drink-food-specials {
+	background-color: #F7F7F7;
+}
+
+/** ABOUT.html **/
+
+
+#about-us {
+	margin-top: 60px;
+}
+
+/** REGISTER-YOUR-BAR.html **/
+
+#managers-registration-form {
+	margin-top: 100px;
+}

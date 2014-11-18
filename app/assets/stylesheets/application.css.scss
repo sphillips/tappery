@@ -261,6 +261,7 @@ a:hover {
     width: 100%;
 }
 
+
 #bar-thumbnail h3 {
     display: block;
     position: absolute;
@@ -452,6 +453,43 @@ a:hover {
     padding: 20px;
 }
 
+#bar-fields {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#bar-fields label {
+    text-align: left;
+}
+
+#bar-fields h1 {
+    text-align: center;
+}
+
+#bar-description-field textarea {
+    height: 100px;
+    width: 250px;
+    vertical-align: middle;
+}
+
+
+#bar-fields input[type=button] {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bar-fields input[type=text] {
+    font-size: 27px;
+    margin-bottom: 20px; 
+}
+
+#bar-fields select {
+    margin-bottom: 20px;
+}
+
+#create-bar-submit {
+    text-align: center;
+}
 
 #form-fields input[type=email] {
     font-size: 27px;
@@ -487,6 +525,7 @@ a:hover {
 /*---- forgotten-password.html ----*/
 #black-submit {
     background-color: #000;
+    text-align: center;
 }
 
 

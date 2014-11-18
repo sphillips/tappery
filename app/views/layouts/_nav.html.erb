@@ -1,23 +1,25 @@
-<div class="navigation-wrapper">
-<!-- Start Navigation Grid -->
-<div class="grid" id="nav-wrapper-grid">
-	<!-- Start Columns -->
-<div class="col-1-1">
-	<!-- Start Navigation Wrapper -->
-	<nav id="nav-wrapper">
-		<div id="links">
-			<a href="/" id="nav-logo"><%= image_tag 'nav-logo.png' %></a>
-			<ul id="nav">
-				<li><a href="/bars">BARS</a></li>
-				<li><a href="#">BLOG</a></li>
-				<li><a href="/about">ABOUT</a></li>
-				<li><a href="/bars/new">REGISTER YOUR BAR</a></li>
-			</ul>
-		</div>
-	</nav>
-	<!-- End Navigation Wrapper -->
-    </div>
-    <!-- End Columns -->
-</div>
-<!-- End Navigation Grid -->
-</div>
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" id="navigation-style" role="navigation">
+		<div class="container">
+			<!-- Responsive Navigation Elements -->
+			<div class="navbar-header">
+      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<%= image_tag "nav-logo.png", id:"nav-logo-img" %>
+				</a>
+			</div> <!-- End Responsive Navigation Elements -->
+			<!-- Navigation Content -->
+			<div class="navbar-collapse collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/bars">BARS</a></li>
+					<li><a href="/about">ABOUT</a></li>
+					<li><a href="/bars/new">REGISTER YOUR BAR</a></li>
+				</ul>
+			</div><!-- End Navigation Content -->
+		</div><!-- End Container -->
+	</nav><!-- End Navigation -->

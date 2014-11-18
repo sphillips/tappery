@@ -1,70 +1,105 @@
-<div class="grid" id="form-wrapper-grid">
-  <div class="col-1-1" id="form-columns">
-    <%= form_for(@bar) do |f| %>
 
-      <% if @bar.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+<div class="container" id="managers-registration-form">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">Create Your Bar Page</h1>
+        <h2 class="text-center"><u>Step 2 of 2</u></h2>
 
-          <ul>
-          <% @bar.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+          </div>
+        </div>
+        <p><i>Fill in the following fields with your businesses information</i></p>
+          <%= form_for(@bar) do |f| %>
+
+            <% if @bar.errors.any? %>
+              <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+              <ul>
+              <% @bar.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            <% end %>
+
+            <div class="form-group">
+              <label for="logo">Logo</label>
+            </div>
+
+            <div class="form-group">
+              <label for="barName">Business Name</label>
+              <%= f.text_field :name, required:true, class:"form-control", placeholder:"O's Boh Tavern" %>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+                <%= f.text_area :description, class:"form-control", rows:"3", placeholder:"Located in BOHeautiful downtown Baltimore, O's Boh Tavern is the perfect bar and restaurant to watch our local teams win championships and bring pride to this great city." %>
+            </div>
+            <div class="form-group">
+              <label for="zipCode">Zip Code</label>
+                <%= f.text_field :zip, class:"form-control", id:"zipCode", placeholder:"Zip Code" %>
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+                <select class="form-control">
+                  <option value="Maryland">Maryland</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="area">Area</label>
+              <select class="form-control">
+                <option value="Downtown">Downtown</option>
+                <option value="Canton">Canton</option>
+                <option value="Federal Hill">Federal Hill</option>
+                <option value="Fells Point">Fells Point</option>
+                <option value="Johns Hopkings">Johns Hopkins</option>
+                <option value="Loyola">Loyola</option>
+                <option value="Townson">Townson</option>
+            </select>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+                <%= f.text_field :phone, class:"form-control", id:"phone", placeholder:"(410)333-4444" %>
+            </div>
+            <div class="form-group">
+              <label for="facebook">Facebook</label>
+                <%= f.text_field :facebook, class:"form-control", id:"facebook", placeholder:"Facebook" %>
+            </div>
+            <div class="form-group">
+              <label for="twitter">Twitter</label>
+                <%= f.text_field :twitter, class:"form-control", id:"twitter", placeholder:"Twitter" %>
+            </div>
+            <div class="form-group">
+              <label for="mondaySpecials">Monday Specials</label>
+                <%= f.text_field :mon_special, class:"form-control", id:"mondaySpecials", placeholder:"2 for 1 burgers, $4 domestic drafts, $4 rail drinks" %>
+            </div>
+            <div class="form-group">
+              <label for="tuesdaySpecials">Tuesday Specials</label>
+                <%= f.text_field :tue_special, class:"form-control", id:"tuesdaySpecials", placeholder:"Taco Tuesday: $1 tacos, $5 import bottles, $3 shots" %>
+            </div>
+            <div class="form-group">
+              <label for="wednesdaySpecials">Wednesday Specials</label>
+                <%= f.text_field :wed_special, class:"form-control", id:"wednesdaySpecials", placeholder:"1/2 off appetizers, $6 signature cocktails" %>
+            </div>
+            <div class="form-group">
+            <label for="thursdaySpecials">Thursday Specials</label>
+                <%= f.text_field :thu_special, class:"form-control", id:"thursdaySpecials", placeholder:"Thirsty Thursday: $2 domestic draft happy hour 6pm-9pm, $4 after 9pm" %>
+            </div>
+            <div class="form-group">
+            <label for="fridaySpecials">Friday Specials</label>
+                <%= f.text_field :fri_special, class:"form-control", id:"fridaySpecials", placeholder:"TGIF: $4 top-shelf happy hour 6pm-8pm, $8 after 8pm" %>
+            </div>
+            <div class="form-group">
+            <label for="saturdaySpecials">Saturday Specials</label>
+                <%= f.text_field :sat_special, class:"form-control", id:"fridaySpecials",placeholder:"Brunch: $1 mimosas & bloody mary's. DJ spinning music all night." %>
+            </div>
+            <div class="form-group">
+            <label for="sundaySpecials">Sunday Specials</label>
+                <%= f.text_field :sun_special, class:"form-control", id:"fridaySpecials", placeholder:"Brunch: $1 mimosas & bloody mary's. 1/2 off Maryland crab cakes." %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Create Bar", class:"btn btn-default btn-lg btn-block" %>
+          </div>
           <% end %>
-          </ul>
-        </div>
-      <% end %>
 
-      <h1>Bar Info</h1>
-      <div id="form-fields">
-      <label>Logo</label><br />
-      <input type="button" value="logoUpload"><br />
-      Business Name: <%= f.text_field :name, required: true %>
-      <br />
-      Description: <%= f.text_field :description %>
-      <br />
-      Zip: <%= f.text_field :zip %>
-      <br />
-      <label>State:</label> 
-      <select>
-          <option value="Maryland">Maryland</option>
-      </select>
-      <br />
-      <label>Region</label> 
-      <select>
-            <option>All</option>
-            <option>Downtown</option>
-            <option>Federal Hill</option>
-            <option>Fells Point</option>
-            <option>Johns Hopkins</option>
-            <option>Loyola</option>
-      </select>
-      <br />
-      Phone: <%= f.text_field :phone %>
-      <br />
-      Facebook:  <%= f.text_field :facebook %>
-      <br />
-      Twitter:  <%= f.text_field :twitter %>
-      <br />
-      Monday Specials:  <%= f.text_field :mon_special %>
-      <br />
-      Tuesday Specials:  <%= f.text_field :tue_special %>
-      <br />
-      Wednesday Specials:  <%= f.text_field :wed_special %>
-      <br />
-      Thursday Specials:  <%= f.text_field :thu_special %>
-      <br />
-      Friday Specials:  <%= f.text_field :fri_special %>
-      <br />
-      Saturday Specials:  <%= f.text_field :sat_special %>
-      <br />
-      Sunday Specials:  <%= f.text_field :sun_special %>
-      <br />
-   
-
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
+      </div>
     </div>
-    </div>
-</div>
+  </div>

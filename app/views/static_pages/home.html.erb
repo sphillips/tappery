@@ -1,51 +1,44 @@
 <% provide(:title, "Home") %>
 
-	<!-- Start Mission Statement Grid -->
-	<div class="mission-statement-wrapper">
-	<div class="grid grid-pad" id="body-wrapper-grid">
-		<div class="col-7-12" id="iphone-mockup">
-			<%= image_tag 'iphone-mockup.png' %>
-		</div>
 
-		<div class="col-5-12" id="mission-statement">
-			<div id="main-logo">
-            	<a href="#"><%= image_tag 'tappery.png' %></a>
-        	</div>
-        	
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id malesuada est. Sed elementum magna dictum aliquam fringilla. Pellentesque nec viverra augue. Nam cursus arcu nec bibendum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent est nisl, pretium sed diam a, porta gravida urna. Donec facilisis eleifend lectus, ac facilisis eros vehicula a. Curabitur hendrerit, risus non pharetra semper, mi ipsum viverra arcu, a tincidunt velit neque vitae enim. Cras elementum est sit amet luctus aliquet.</p>
-			
-			<div id="app-store-badge">
-				<%= image_tag 'app-store-badge.png' %>
-			</div>
+    <!-- Jumbotron Content -->
+    <div class="jumbotron" id="featured-information">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <%= image_tag "iphone-mockup.png", class:"img-responsive", id:"index-iphone-mockup", alt:"iphone mockup" %>
+                </div>
+                <div class="col-md-5">
+                    <h1>Tappery</h1>
+                    <h2>Where Are Your Friends Tonight?</h2>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non sapien quis metus tempus volutpat. Sed accumsan, ligula a faucibus iaculis, mi erat ornare orci, eu gravida lacus est non mi. Morbi ipsum ligula, commodo vel libero quis, condimentum aliquet lectus. Morbi id hendrerit libero.</h3>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Jumbotron Content -->
 
-		</div>
-	</div>
-	</div>
-<!-- End Mission Statement Grid -->
-	
-<!-- Start Features Detail Grid -->
-	<div class="features-detail-wrapper">
-	<div class="grid grid-pad" id="features-detail-grid">
-		<div class="col-1-4" id="features-content">
-			<h3>DAILY SPECIALS</h3>
-			<%= image_tag 'daily-specials.png' %>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id malesuada est. Sed elementum magna dictum aliquam fringilla. Pellentesque nec viverra augue. Nam cursus arcu nec bibendum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		</div>
-		<div class="col-1-4" id="features-content">
-			<h3>EVENTS FEED</h3>
-			<%= image_tag 'events-feed.png' %>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id malesuada est. Sed elementum magna dictum aliquam fringilla. Pellentesque nec viverra augue. Nam cursus arcu nec bibendum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		</div>
-		<div class="col-1-4" id="features-content">
-			<h3>BAR DIRECTORY</h3>
-			<%= image_tag 'bars.png' %>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id malesuada est. Sed elementum magna dictum aliquam fringilla. Pellentesque nec viverra augue. Nam cursus arcu nec bibendum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		</div>
-		<div class="col-1-4" id="features-content">
-			<h3>FRIENDS GOING OUT</h3>
-			<%= image_tag 'profile.png' %>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id malesuada est. Sed elementum magna dictum aliquam fringilla. Pellentesque nec viverra augue. Nam cursus arcu nec bibendum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		</div>
-	</div>
-</div>
+    <div class="container" id="additional-information">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4>DAILY SPECIALS</h4>
+                <%= image_tag "daily-specials.png", class:"img-responsive", alt:"daily specials tab screenshot" %>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non sapien quis metus tempus volutpat. Sed accumsan, ligula a faucibus iaculis, mi erat ornare orci, eu gravida lacus est non mi. Morbi ipsum ligula, commodo vel libero quis, condimentum aliquet lectus. Morbi id hendrerit libero. Aliquam imperdiet dictum suscipit. Nullam volutpat vulputate vestibulum. Phasellus nec leo eget dui auctor finibus.</p>
+            </div>
+            <div class="col-sm-3">
+                <h4>EVENTS FEED</h4>
+                <%= image_tag "events-feed.png", class:"img-responsive", alt:"events feed tab screenshot" %>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non sapien quis metus tempus volutpat. Sed accumsan, ligula a faucibus iaculis, mi erat ornare orci, eu gravida lacus est non mi. Morbi ipsum ligula, commodo vel libero quis, condimentum aliquet lectus. Morbi id hendrerit libero. Aliquam imperdiet dictum suscipit. Nullam volutpat vulputate vestibulum. Phasellus nec leo eget dui auctor finibus.</p>
+            </div>
+            <div class="col-sm-3">
+                <h4>BAR DIRECTORY</h4>
+                <%= image_tag "bars.png", class:"img-responsive", alt:"bars tab screenshot" %>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non sapien quis metus tempus volutpat. Sed accumsan, ligula a faucibus iaculis, mi erat ornare orci, eu gravida lacus est non mi. Morbi ipsum ligula, commodo vel libero quis, condimentum aliquet lectus. Morbi id hendrerit libero. Aliquam imperdiet dictum suscipit. Nullam volutpat vulputate vestibulum. Phasellus nec leo eget dui auctor finibus.</p>
+            </div>
+            <div class="col-sm-3">
+                <h4>FRIENDS LIST</h4>
+                <%= image_tag "profile.png", class:"img-responsive", alt:"profile tab screenshot" %>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non sapien quis metus tempus volutpat. Sed accumsan, ligula a faucibus iaculis, mi erat ornare orci, eu gravida lacus est non mi. Morbi ipsum ligula, commodo vel libero quis, condimentum aliquet lectus. Morbi id hendrerit libero. Aliquam imperdiet dictum suscipit. Nullam volutpat vulputate vestibulum. Phasellus nec leo eget dui auctor finibus.</p>
+            </div>
+        </div>
+    </div>
 <!-- End Features Detail Grid -->
