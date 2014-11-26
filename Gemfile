@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 # have to use this version of devise so rails 4 strong parameters will work
 gem 'devise', '3.0.0.rc'
+gem 'friendly_id', '~> 5.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
