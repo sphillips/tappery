@@ -1,94 +1,99 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container" id="bars-detail-header">
+<div class="container bar-detail-header">
+
+	<div class="row admin-links">
+		<p><%= link_to 'Edit', edit_bar_path(@bar) %> | <%= link_to 'Back', bars_path %></p>
+	</div>
+
 		<div class="row">
 			<div class="col-md-4">
 				<img src="http://placehold.it/320x180" class="img-responsive">
 			</div>
 			<div class="col-md-8">
-				<h1>Bar Name</h1>
-				<h2>123 Fake Street, Baltimore, Maryland</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra vehicula tempus. Morbi a massa sed urna finibus venenatis id id arcu. Mauris eu luctus dui. Sed aliquam eget mauris sed ullamcorper. Integer mattis volutpat mauris a facilisis. Nunc non orci dolor. Vestibulum ultricies ac augue sed tristique. Nulla et leo sit amet odio porttitor consectetur eget vel sapien. Morbi pharetra vehicula auctor. Vivamus sapien orci, vehicula at tempus ac, viverra sed tellus</p>
-				<ul>
-					<li><%= image_tag "facebook.png", id:"bars-detail-social-media", alt:"facebook icon" %>Facebook</li>
-					<li><%= image_tag "twitter.png", id:"bars-detail-social-media", alt:"twitter icon" %>Twitter</li>
-					<li>Websites</li>
+				<h1><%= @bar.name %></h1>
+				<h2><%= @bar.address_1 %></h2>
+				<p><%= @bar.description %></p>
+				<ul class="social-icons">
+					<% unless @bar.facebook.nil? %>
+						<li><a href="<%= @bar.facebook %>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<% end %>
+					<% unless @bar.twitter.nil? %>
+						<li><a href="<%= @bar.twitter %>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<% end %>
+					<!-- <li>Websites</li> -->
 				</ul>
 			</div>
 		</div>
-	</div>
+	<!--  -->
+</div>
 
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>MONDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>TUESDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
+<div class="container bars-daily-specials">
+
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>MONDAY</p>
 		</div>
-	</div>
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>WEDNESDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
-		</div>
-	</div>
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>THURSDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
-		</div>
-	</div>
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>FRIDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
-		</div>
-	</div>
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>SATURDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
-		</div>
-	</div>
-	<div class="container" id="bars-daily-specials">
-		<div class="row">
-			<div class="col-md-3" id="bars-day-of-week">
-				<p>SUNDAY</p>
-			</div>
-			<div class="col-md-9" id="bars-drink-food-specials">
-				<p>$10 Burritos, $4 beers, $2 shots</p>
-			</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.mon_special %></p>
 		</div>
 	</div>
 
-<%= link_to 'Edit', edit_bar_path(@bar) %> |
-<%= link_to 'Back', bars_path %>
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>TUESDAY</p>
+		</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.tue_special %></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>WEDNESDAY</p>
+		</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.wed_special %></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>THURSDAY</p>
+		</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.thu_special %></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>FRIDAY</p>
+		</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.fri_special %></p>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>SATURDAY</p>
+		</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.sat_special %></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 bars-day-of-week">
+			<p>SUNDAY</p>
+		</div>
+		<div class="col-md-9 bars-drink-food-specials">
+			<p><%= @bar.sun_special %></p>
+		</div>
+	</div>
+
+	<!-- bar specials container -->
+</div>		

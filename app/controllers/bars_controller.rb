@@ -11,6 +11,7 @@ class BarsController < ApplicationController
   # GET /bars/1
   # GET /bars/1.json
   def show
+    @bar = Bar.find(params[:id])
   end
 
   # GET /bars/new
@@ -20,6 +21,7 @@ class BarsController < ApplicationController
 
   # GET /bars/1/edit
   def edit
+    @bar = Bar.find(params[:id])
   end
 
   # POST /bars
