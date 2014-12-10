@@ -6,11 +6,11 @@
 		<p><%= link_to 'Edit', edit_bar_path(@bar) %> | <%= link_to 'Back', bars_path %></p>
 	</div>
 
-		<div class="row">
+		<div class="row" id="bars-primary-container">
 			<div class="col-md-4">
 				<img src="http://placehold.it/320x180" class="img-responsive">
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8" id="bars-primary-information">
 				<h1><%= @bar.name %></h1>
 				<h2><%= @bar.address_1 %></h2>
 				<p><%= @bar.description %></p>
@@ -26,12 +26,10 @@
 			</div>
 		</div>
 	<!--  -->
-</div>
 
 
-<div class="container bars-daily-specials">
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>MONDAY</p>
 		</div>
@@ -40,7 +38,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>TUESDAY</p>
 		</div>
@@ -49,7 +47,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>WEDNESDAY</p>
 		</div>
@@ -58,7 +56,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>THURSDAY</p>
 		</div>
@@ -67,7 +65,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>FRIDAY</p>
 		</div>
@@ -77,7 +75,7 @@
 	</div>
 
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>SATURDAY</p>
 		</div>
@@ -86,7 +84,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row bars-specials-group">
 		<div class="col-md-3 bars-day-of-week">
 			<p>SUNDAY</p>
 		</div>
