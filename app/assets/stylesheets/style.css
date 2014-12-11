@@ -1,11 +1,18 @@
 /** GENERAL **/
-h1,h2,h3,a,p,label {
+
+
+h1,h2,h3,h4,a,p,label {
     font-family: 'HouschkaAlt-Light', Fallback, sans-serif;
 }
 
 
 
 /** NAVIGATION **/
+
+.navbar-default .navbar-toggle {
+	border-style: none;
+}
+
 
 
 #navigation-style {
@@ -96,6 +103,10 @@ a.navbar-brand {
 	background-color: #F7F7F7;
 }
 
+#bars-bar-content h2 {
+	margin-top: 0;
+}
+
 
 /** BARS-DETAIL.html **/
 
@@ -163,7 +174,8 @@ ul.social-icons li {
 }
 
 .bars-drink-food-specials {
-	background-color: #F7F7F7;
+	background-color: #E5E5E5;
+	min-height: 50px;
 }
 
 #about-us {
@@ -178,6 +190,14 @@ ul.social-icons li {
 
 #about-us {
 	margin-top: 60px;
+}
+
+.what-we-provide {
+	text-align: center;
+}
+
+.what-we-provide img {
+	margin: 0 auto;
 }
 
 /** REGISTER-YOUR-BAR.html **/
