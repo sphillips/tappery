@@ -4,9 +4,31 @@ class BarsController < ApplicationController
 
   # GET /bars
   # GET /bars.json
+  # def index
+  #   @bars = Bar.all
+  # end
+
   def index
-    @bars = Bar.all
-  end
+    @title = "Campus Taps | Bars"
+    @regions = Region.all
+    if params[:region_id]
+      if params[:region_id] == "all"
+        @bars = Bar.all
+      else
+        region = Region.find(params[:region_id])
+        # @bars = region.bars.page(params[:page]).per(10)
+        @bars = region.bars
+      end
+    else
+      # @bars = Bar.page(params[:page]).per(10)
+      @bars = Bar.all
+    end
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @bars }
+      format.json { render :json => @bars }
+    end
+  end  
 
   # GET /bars/1
   # GET /bars/1.json
