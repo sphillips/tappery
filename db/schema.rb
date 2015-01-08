@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141227231033) do
+ActiveRecord::Schema.define(version: 20150108174350) do
 
   create_table "bars", force: true do |t|
     t.string   "name"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20141227231033) do
   end
 
   add_index "bars", ["slug"], name: "index_bars_on_slug"
+
+  create_table "friendships", force: true do |t|
+    t.string   "user_id"
+    t.string   "friend_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friendships", ["user_id"], name: "index_friendships_on_user_id"
 
   create_table "regions", force: true do |t|
     t.string   "name"
