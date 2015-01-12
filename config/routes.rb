@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
 
+  devise_for :users
+  resources :bars, :friendships
+
   get '/home' => 'static_pages#home'
   get '/about' => 'static_pages#about'
-
-  devise_for :users
-  resources :bars
+  get 'friendships/update' => 'friendships#update', :as => :update
+  get 'friendships/truncate' => 'friendships#truncate', :as => :truncate
 
   # Example of regular route:
     # get 'products/:id' => 'catalog#view'

@@ -4,35 +4,22 @@ class FriendshipsController < ApplicationController
   # GET /friendships
   # GET /friendships.xml
   def index
-    friendships = Friendship.find(:all, :select => "id,friend_id,status", :conditions => ["user_id = ?", params[:user_id]])
-
-    respond_to do |format|
-      format.json { render :json => friendships }
-      # format.html # index.html.erb
-      # format.xml  { render :xml => @friendships }
-    end
+    # friendships = Friendship.find(:all, :select => "id,friend_id,status", :conditions => ["user_id = ?", params[:user_id]])
+    friendships = Friendship.select("id,friend_id,status").where(:user_id => params[:user_id])
+    render :json => friendships
   end
 
   # GET /friendships/1
   # GET /friendships/1.xml
   def show
     @friendship = Friendship.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @friendship }
-    end
+    render :json => @friendship
   end
 
   # GET /friendships/new
   # GET /friendships/new.xml
   def new
-    @friendship = Friendship.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @friendship }
-    end
+    
   end
 
   # GET /friendships/1/edit
